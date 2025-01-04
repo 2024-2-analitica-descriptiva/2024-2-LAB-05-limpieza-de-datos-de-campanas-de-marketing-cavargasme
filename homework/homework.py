@@ -86,7 +86,7 @@ def clean_campaign_data():
     ds['last_contact_date'] = pd.to_datetime({'year':2022, 'month':ds['month'], 'day':ds['day']})
 
     client = ds[['client_id','age','job','marital','education','credit_default','mortgage']]
-    campaign = ds[['client_id','number_contacts','contact_duration','previous_campaign_contacts','previous_outcome','campaign_outcome','last_contact_day']]
+    campaign = ds[['client_id','number_contacts','contact_duration','previous_campaign_contacts','previous_outcome','campaign_outcome','last_contact_date']]
     economics = ds[['client_id','cons_price_idx','euribor_three_months']]
 
     os.makedirs('files/output/', exist_ok=True)
