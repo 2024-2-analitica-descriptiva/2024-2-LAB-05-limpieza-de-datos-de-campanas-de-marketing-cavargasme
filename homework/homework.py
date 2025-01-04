@@ -87,7 +87,7 @@ def clean_campaign_data():
 
     client = ds[['client_id','age','job','marital','education','credit_default','mortgage']]
     campaign = ds[['client_id','number_contacts','contact_duration','previous_campaign_contacts','previous_outcome','campaign_outcome','last_contact_day']]
-    economics = ds[['client_id','const_price_idx','eurobor_three_months']]
+    economics = ds[['client_id','cons_price_idx','euribor_three_months']]
 
     os.makedirs('files/output/', exist_ok=True)
 
