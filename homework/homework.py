@@ -83,7 +83,7 @@ def clean_campaign_data():
 
     # last_contact_day: crear un valor con el formato "YYYY-MM-DD",combinando los campos "day" y "month" con el año 2022.
     ds['month'] = pd.to_datetime(ds['month'], format = '%b').dt.month
-    ds['last_contact_day'] = pd.to_datetime({'year':2022, 'month':ds['month'], 'day':ds['day']})
+    ds['last_contact_date'] = pd.to_datetime({'year':2022, 'month':ds['month'], 'day':ds['day']})
 
     client = ds[['client_id','age','job','marital','education','credit_default','mortgage']]
     campaign = ds[['client_id','number_contacts','contact_duration','previous_campaign_contacts','previous_outcome','campaign_outcome','last_contact_day']]
