@@ -75,7 +75,7 @@ def clean_campaign_data():
     # credit_default: convertir a "yes" a 1 y cualquier otro valor a 0
     ds['credit_default'] = ds['credit_default'].apply(lambda x: 1 if x == 'yes' else 0)
     # mortage: convertir a "yes" a 1 y cualquier otro valor a 0
-    ds['mortage'] = ds['mortage'].apply(lambda x: 1 if x == 'yes' else 0)
+    ds['mortgage'] = ds['mortgage'].apply(lambda x: 1 if x == 'yes' else 0)
     # previous_outcome: cmabiar "success" por 1, y cualquier otro valor a 0
     ds['previous_outcome'] = ds['previous_outcome'].apply(lambda x: 1 if x == 'success' else 0)
     # campaign_outcome: cambiar "yes" por 1 y cualquier otro valor a 0
